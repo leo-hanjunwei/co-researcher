@@ -1,4 +1,6 @@
 # CO-Researcher
+<p align="center"> <img width="2048" height="1031" alt="image" src="https://github.com/user-attachments/assets/a6631f19-ee9d-4916-b8c1-8dec44c345f7" /> </p>
+
 <p align="center"> <img width="436" height="1018" alt="image" src="https://github.com/user-attachments/assets/f937ec41-ce54-4576-b59c-14c6303171b4" /> </p>
 
 **CO-Researcher** is a browser-embedded AI assistant. Its core purpose is to **streamline the “last-mile” data analysis process** by allowing users to query and extract insights from large volumes of structured or unstructured data.
