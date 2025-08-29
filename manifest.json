@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "CO-Researcher",
+  "version": "2.0",
+  "description": "Paste clipboard or typed text and analyze with Azure GPT",
+  "permissions": ["scripting", "activeTab", "storage", "clipboardRead", "clipboardWrite"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["modelList.js", 
+      "content.js", "marked.min.js","libs/highlight.min.js",
+      "libs/katex.min.js",
+      "libs/auto-render.min.js"]
+    }
+  ],
+    "web_accessible_resources": [
+    {
+      "resources": ["prompts/*.txt", 
+      "icons/*","libs/highlight.min.js", 
+      "libs/github.min.css",
+      "libs/katex.min.css",
+      "libs/katex.min.js",
+      "libs/auto-render.min.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
